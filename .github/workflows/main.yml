@@ -24,8 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-# cooment 
- - name: Setup Node.js environment
+    - name: Setup Node.js environment
     uses: actions/setup-node@v2-beta
     with:
     version: 12
@@ -40,4 +39,6 @@ jobs:
  - name: installing surge
   run: npm install -- global surge
  - name: deploying on surge
-   run: surge ./build http://bootcamp_session34.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+   run: surge ./build http://bootcamp_session34.surge.sh/ --token ${{secrets.SURGE_TOKEN}}  
+
+ 
